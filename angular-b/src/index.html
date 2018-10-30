@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ClientA</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script>
+
+    /* Demonstration of lazy loading */
+    function loadScripts() {
+      var scripts = [
+        'http://localhost:8081/main.js',
+        'http://localhost:8098/js/bundle2.js',
+        'http://localhost:8098/js/bundle1.js',
+        'http://localhost:8097/miles.js'
+      ];
+
+      for(var i = 0; i<scripts.length; i++) {
+        var elm = document.createElement('script');
+        elm.src = scripts[i];
+        document.body.appendChild(elm);
+      }
+    }
+  
+  </script>
+
+</head>
+<body onload="loadScripts()">
+  
+  <app></app>
+  
+</body>
+</html>

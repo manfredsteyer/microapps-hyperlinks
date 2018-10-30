@@ -1,0 +1,17 @@
+{
+  "name": "vanilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "miles.js",
+  "scripts": {
+    "build": "tsc",
+    "start:dist": "http-server -p 8097"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "typescript": "^3.1.4"
+  }
+}
