@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   template: `
-  <!-- style="border: darkred 5px dashed;" -->
-  <div >
+  <div style="border: darkred 5px dashed;">
   <div class="wrapper">
   <div class="sidebar" data-background-color="white" data-active-color="danger">
     
