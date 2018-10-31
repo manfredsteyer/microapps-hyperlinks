@@ -10,6 +10,8 @@ import { EmptyComponent } from './empty/empty.component';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { CoreComponent } from './core/core.component';
 import { PushPipe } from './push.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   imports: [
@@ -21,7 +23,8 @@ import { PushPipe } from './push.pipe';
         { path: 'page2', component: Page2Component },
       ]}
     ], { useHash: true }),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   declarations: [
     AppComponent,
