@@ -4,14 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --project shell -o",
-    "start:dist": "http-server dist/angular-shared -p 8081",
+    "start:dist": "http-server dist/angular-shared -p 8099",
     "build": "ng build --prod --project angular-shared --output-hashing none --single-bundle true",
-    "build:clients": "npm run build:client-a && npm run build:client-b",
-    "build:client-a": "ng build --prod --project client-a --output-hashing none --vendor-chunk false --output-path dist/shell/client-a",
-    "build:client-b": "ng build --prod --project client-b --output-hashing none --vendor-chunk false --output-path dist/shell/client-b",
-    "build:shell": "ng build --project shell",
-    "build:clients:webpack:old-solution": "webpack",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

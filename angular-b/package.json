@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:dist": "http-server dist/angular -p 8082",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

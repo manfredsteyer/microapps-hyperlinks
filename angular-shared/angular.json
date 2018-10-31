@@ -29,31 +29,6 @@
               },
               {
                 "glob": "**/*",
-                "input": "src/client-a",
-                "output": "/client-a"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/client-b",
-                "output": "/client-b"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/client-c",
-                "output": "/client-c"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/client-d",
-                "output": "/client-d"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/client-e",
-                "output": "/client-e"
-              },
-              {
-                "glob": "**/*",
                 "input": "src/img",
                 "output": "/img"
               }
