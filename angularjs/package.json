@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -d && npm run copy",
+    "build": "webpack -d",
     "start": "webpack-dev-server --open -d",
-    "copy": "cpr dist ../shell/src/client-e -d"
+    "start:dist": "webpack-dev-server --open -p --port 8083"
   },
   "keywords": [],
   "author": "Manfred Steyer",
@@ -16,6 +16,7 @@
     "@types/node": "^10.9.2",
     "cpr": "^3.0.1",
     "css-loader": "^1.0.0",
+    "http-server": "^0.11.1",
     "to-string-loader": "^1.1.5",
     "ts-loader": "^4.5.0",
     "typescript": "^3.0.1",

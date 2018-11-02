@@ -3,25 +3,28 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "install:all": "npm run install:angular-shared && npm run install:angular-a && npm run install:angular-b && npm run install:vanilla && npm run install:vue",
+    "install:all": "npm run install:angular-shared && npm run install:angular-a && npm run install:angular-b && npm run install:vanilla && npm run install:vue && npm run install:angularjs",
     "install:angular-shared": "npm install --prefix angular-shared",
     "install:angular-a": "npm install --prefix angular-a",
     "install:angular-b": "npm install --prefix angular-b",
     "install:vue": "npm install --prefix vue",
     "install:vanilla": "npm install --prefix vanilla",
-    "build:all": "npm run build:angular-shared && npm run build:angular-a && npm run build:angular-b && npm run build:vanilla && npm run build:vue",
+    "install:angularjs": "npm install --prefix angularjs",
+    "build:all": "npm run build:angular-shared && npm run build:angular-a && npm run build:angular-b && npm run build:vanilla && npm run build:vue && npm run build:angularjs",
     "build:angular-shared": "npm run build --prefix angular-shared",
     "build:angular-a": "npm run build --prefix angular-a",
     "build:angular-b": "npm run build --prefix angular-b",
     "build:vue": "npm run build --prefix vue",
     "build:vanilla": "npm run build --prefix vanilla",
+    "build:angularjs": "npm run build --prefix angularjs",
     "start": "npm run start:all",
     "start:all": "concurrently \"npm:start:dist:*\" ",
     "start:dist:angular-shared": "npm run start:dist --prefix angular-shared",
     "start:dist:angular-a": "npm run start:dist --prefix angular-a",
     "start:dist:angular-b": "npm run start:dist --prefix angular-b",
     "start:dist:vue": "npm run start:dist --prefix vue",
-    "start:dist:vanilla": "npm run start:dist --prefix vanilla"
+    "start:dist:vanilla": "npm run start:dist --prefix vanilla",
+    "start:dist:angularjs": "npm run start:dist --prefix angularjs"
   },
   "devDependencies": {
     "concurrently": "^4.0.1"

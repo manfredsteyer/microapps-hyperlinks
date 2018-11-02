@@ -1,7 +1,7 @@
 import { ServiceBus } from './service-bus';
 
 export const bookingsComponent: angular.IComponentOptions = {
-    controller: ['serviceBus', '$scope', '$location', function(serviceBus: ServiceBus, $scope: angular.IScope, $location: angular.ILocationService) {
+    controller: ['$scope', '$location', function($scope: angular.IScope, $location: angular.ILocationService) {
         const that = this;
 
         this.title = 'Your Bookings';
@@ -11,28 +11,13 @@ export const bookingsComponent: angular.IComponentOptions = {
             { id: '4712', from: 'New York', to: 'Graz', date: new Date() }
         ];
 
-        this.select = function(b) {
-            const data = {
-                domainEvent: 'booking-selected',
-                booking: b
-            }
-            serviceBus.send({ type: 'message', data });
+        this.select = function(e) {
+            
         }
-
-        serviceBus.registerFor('appState', msg => {
-            console.debug('got appState in AngularJS component', msg.data);
-            that.title = msg.data.passenger.name + "'s Bookings";
-            $scope.$digest();
-        });
-
-        $scope.$on('$locationChangeSuccess', () => {
-            this.show = location.hash === '#/booking-list';
-        });
-        
-        
+       
     }],
     template: `
-    <div style="border: dashed 5px gray; padding: 10px;" ng-if="$ctrl.show">
+    <div style="border: dashed 5px gray; padding: 10px;">
 
         <div style="margin-bottom:10px;">
             <img src="assets/img/angularjs.png" height="50">

@@ -1,31 +1,45 @@
 <html>
     <head>
         <title>AngularJS with Custom Elements</title>
-        <!--
+        
         <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
         <link href="./assets/css/paper-dashboard.css" rel="stylesheet"/>
         <link href="./assets/css/demo.css" rel="stylesheet" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
         <link href="./assets/css/themify-icons.css" rel="stylesheet">
-          -->
+          
         
     </head>
     <body> 
 
-        <div class="container">
-            <booking-list app-state='{ "passenger": { "name": "Max" } }'></booking-list>
-        </div>
+        <div style="border: gray 0px dashed;">
+            <div class="wrapper">
+            <div class="sidebar" data-background-color="white" data-active-color="danger">
+              
+                <div>
+                  <sidebar-component></sidebar-component>
+                </div>
+            </div>
+            <div class="main-panel">
+                
+                <navbar-component></navbar-component>
+                <div id="content" class="content">
+                    
+                    <!-- AngularJS app Root Element -->
+                    <bookings></bookings>                      
+                  
+          
+                </div>
+            </div>
+          </div>
+          </div>        
+     
         <script src="assets/script/native-shim.js"></script>
         <script src="main.js"></script>
-        <script>
-            var ce = document.getElementsByTagName('booking-list')[0];
-            ce.addEventListener('message', function (e) {
-                console.debug('message', e);
-            })
+        <script src="http://localhost:8099/main.js"></script>
+        
 
-            location.hash = '/booking-list';
-        </script>
-    
+
     </body>
 </html>
