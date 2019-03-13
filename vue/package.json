@@ -24,6 +24,7 @@
     "css-loader": "^1.0.0",
     "html-loader": "^0.5.5",
     "http-loader": "0.0.1",
+    "http-server": "^0.11.1",
     "raw-loader": "^0.5.1",
     "rename-cli": "^5.1.2",
     "style-loader": "^0.21.0",
